@@ -1,4 +1,7 @@
+import os
 from flask import Flask, request, abort, jsonify
+from openaihelper import OpenAiHelper
+from service import ask_question
 
 app = Flask(__name__)
 
@@ -15,6 +18,7 @@ def get_square():
 def get_answer():
     if not request.json or 'prompt' not in request.json:
         abort(400)
-    prompy = request.json['prompt']
+    prompt = request.json['prompt']
 
-    return jsonify({'prompt': prompt})
+    openaihelper = OpenAiHelper(os.environ["OPENAI_API_KEY"],os.environ["OPENAI_API_ENDPOINT"],os.environ["OPENAI_API_VERSION"])
+    return jsonify(ask_question(openaihelper, prompt))
