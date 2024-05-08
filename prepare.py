@@ -32,7 +32,7 @@ cloudDocChunks = text_splitter.split_documents(cloudDocs)
 
 vectordb = Chroma.from_documents(
     documents=cloudDocChunks,
-    embedding=helper.getLangChainEmbeddings(),
+    embedding=helper.getEmbeddings(),
     persist_directory=CLOUD_DOCS_DB_DIRECTORY
 )
 
@@ -52,7 +52,7 @@ uzunDocChunks = markdown_splitter.split_text(uzunData)
 
 uzunVectordb = Chroma.from_documents(
     documents=uzunDocChunks,
-    embedding=helper.getLangChainEmbeddings(),
+    embedding=helper.getEmbeddings(),
     persist_directory=UZUN_DOCS_DB_DIRECTORY
 )
 
