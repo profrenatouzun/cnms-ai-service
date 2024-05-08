@@ -2,8 +2,8 @@ import os
 from dotenv import load_dotenv, find_dotenv
 from flask import Flask, request, abort, jsonify
 from flask_cors import CORS, cross_origin
-from openaihelper import OpenAiHelper
-from service import ask_question
+from OpenAiHelper import OpenAiHelper
+from CloudAiService import CloudAiService
 
 __import__('pysqlite3')
 import sys
@@ -36,8 +36,8 @@ def get_answer():
     prompt = request.json['prompt']
 
     openaihelper = OpenAiHelper(os.environ["OPENAI_API_KEY"],os.environ["OPENAI_API_ENDPOINT"],os.environ["OPENAI_API_VERSION"])
-    return jsonify(ask_question(openaihelper, prompt))
-
+    service = CloudAiService(openaihelper=openaihelper)
+    return jsonify(service.askQuestion(prompt))
 
 def create_app():
    return app

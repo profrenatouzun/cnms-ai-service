@@ -4,7 +4,7 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.vectorstores import Chroma
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.text_splitter import MarkdownHeaderTextSplitter
-from openaihelper import OpenAiHelper
+from OpenAiHelper import OpenAiHelper
 
 CLOUD_DOCS_DB_DIRECTORY = 'db/cloud/'
 UZUN_DOCS_DB_DIRECTORY = 'db/uzun/'
