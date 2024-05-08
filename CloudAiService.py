@@ -13,33 +13,35 @@ class CloudAiService:
             self.openaihelper = openaihelper
 
     def askQuestion(self, promptText):
+        
         tagging_functions = [promptTaggingOpenAIFunctionTemplate]
-    
         llm = self.openaihelper.getChatLlm().bind(functions= tagging_functions, function_call={"name": "PromptTagging"});
         prompt = ChatPromptTemplate.from_messages([
             ("system", "Think carefully, and then tag the text as instructed"),
             ("user", "{promptText}")
         ])        
         
-        chain = prompt | llm | self.getArguments | self.callAgent
+        chain = prompt | llm | self.getTagArguments | self.callAgent
 
-        return chain.invoke({"promptText": promptText})
+        output = chain.invoke({"promptText": promptText})
+        output["prompt"] = promptText
+        return output
+        
         
 
-    def getArguments(self, jsonData):
+    def getTagArguments(self, jsonData):
         s = jsonData.additional_kwargs["function_call"]["arguments"]
         s = s.replace("(","").replace(")", "")
         s2 = dirtyjson.loads(s)
-        print(s)
         return s2
 
 
-    def callAgent(self, promptData):
+    def callAgent(self, promptTags):
         
-        if not promptData["language"].lower().startswith("portugues") and not promptData["language"].lower() == "pt":
-            return { "prompt": promptData["standaloneQuestion"], "answer": LANGUAGE_ERROR_MESSAGE }
+        if not promptTags["language"].lower() == "pt":
+            return { "answer": LANGUAGE_ERROR_MESSAGE, "tags": promptTags }
         
-        subject = promptData["subject"].lower();
+        subject = promptTags["subject"].lower();
         agent = None
         
         if subject == "cloud computing":
@@ -49,7 +51,9 @@ class CloudAiService:
             agent = TeacherRenatoUzunInfoAgent(openaihelper=self.openaihelper)
         
         else:
-            return { "prompt": promptData["standaloneQuestion"], "answer": SUBJECT_ERROR_MESSAGE }
+            return { "answer": SUBJECT_ERROR_MESSAGE, "tags": promptTags }
             
-        return agent.askQuestion(promptData["standaloneQuestion"])
+        output = agent.askQuestion(promptTags["standaloneQuestion"])
+        output["tags"] = promptTags
+        return output
         

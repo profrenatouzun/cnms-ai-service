@@ -27,11 +27,10 @@ class ChromaDbDataAgent:
         result = chain.invoke({"query": newPrompt})
         
         output = {
-            "prompt": prompt,
             "answer": result['result'],
         }
-        
-        if self.returnSources:
-            output.references = list(map(lambda x: x.metadata, result['source_documents']))
+
+        if self.returnSources and result['source_documents'] :
+            output["references"] = list(map(lambda x: x.metadata, result['source_documents']))
         
         return output
