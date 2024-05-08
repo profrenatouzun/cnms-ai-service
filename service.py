@@ -60,7 +60,7 @@ def ask_question( openaihelper, prompt):
         print(f"Cloud Data Vector DB Size: {cloudDataVectordb._collection.count()}")
 
         chain = RetrievalQA.from_chain_type(openaihelper.getLangChainChatLlm(),
-            retriever=cloudDataVectordb.as_retriever(search_kwargs={'k': 1}),
+            retriever=cloudDataVectordb.as_retriever(search_kwargs={'k': 3}),
             chain_type="refine",
             return_source_documents=True,
         )
