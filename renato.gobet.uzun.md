@@ -4,17 +4,13 @@
 
 * Nome: Renato Gobet Uzun				
 * Data de Nascimento: 20 / 04 / 1982
-* Estado Civil: Solteiro
 * Naturalidade:  São Bernardo do Campo
 
 ## Formação Escolar
 
 * Superior:  Bacharelado em Sistemas de Informação - Fundação Santo André
-
 * Médio:  Técnico em Eletrônica - E.T.E. “Lauro Gomes” 
-
 * Fundamental:  E.E.P.S.G. “Santa Olímpia”
-
 
 ## Formação Profissional ( Área acadêmica / didática ):
 
@@ -25,7 +21,6 @@
 * Monitor de estruturas de dados e algoritmos avançados pela Fundação Santo André;
 * Professor de Artes Marciais desde 2001;
 
-
 ## Cursos e Treinamentos
 
 * Cursos de MS-DOS, Word star, Lotus 123 e Dbase III Plus pela C.E.N.A.I. Informática (1993)
@@ -35,7 +30,6 @@
 * Treinamento de desenho em Tango pela MULTIFLUX
 * Inglês Avançado
 * Espanhol Básico
-      
       
 ## Conhecimentos na área de Análise e Programação
       
@@ -48,7 +42,6 @@
 * Bancos de Dados: Oracle, MySQL , PostgreSQL, MS Access, SQL Server;
 * Conhecimento Avançado em Windows (Win32 API Developer);
 * Conhecimento em LINUX e UNIX (Programação Unix Shell);
-      
 
 ## Experiência Profissional:
 
@@ -82,7 +75,6 @@ Período:  Maio / 2011 – Junho / 2018
 Cargo: Sócio.
 Atividades: Responsável pela área de desenvolvimento de Sistemas. Desenvolvimento de sistemas especializados em precificação de opções para o mercado financeiro. Desenvolvimento da calculadora de renda fixa junto a bolsa de valores (B3).
 
-
 Empresa: CRK Informática – Prestação de Serviços pela Uzun Tecnologia
 Período:  Março / 2008 – Maio / 2011			
 Cargo: Analista / Programador.
@@ -113,15 +105,36 @@ Período: Abril / 1997 – Julho / 2000
 Cargo: Aprendiz de Eletrônica
 Atividades: Montagem e manutenção de Placas de Circuito Impresso
 
+## Relacionamento
+ * Status: Namorando. 
+ * Namorada: Giselle. 
+ * Descritivo: Tem uma namorada linda chamada Giselle. É apaixonado por ela. Gosta muito quando estão juntos. Uma mulher bem parceira que pode contar com ela.
+
+## Hobbies
+
+### Mergulho
+Gosta muito de ir ao mar e praticar esse esporte chamado mergulho, conhecer a vida marinha e os naufrágios
+
+### Fotografia
+Uma das grandes paixões é poder fotografar, seja a natureza, praias, pessoas animais e fotos em baixo dagua.
+
+### Música
+Paixão pela música começou desde cedo, mas so foi possível pegar no instrumento quando tinha 23 anos. Começou a estudar música tarde mas adora poder tocar. Hoje ele toca na missa na igreja católica praticamente todos os domingos.
+
+### Artes Marciais
+Formado faixa preta em Tae Kwon Do desde 2001, adora esse esporte e o pratica toda semana. Apesar de ser formado e poder ser professor não exerce mais esse cargo na academia, apesar de que ajuda como pode.
+
+### Role Playing Game (RPG)
+Conheceu o RPG em 1997 e gosta muito de jogar. Tem alguns grupos de amigos que jogam junto, muitas vezes gosta de mestrar pricipalmente Dungeons & Dragons
+
+### Escotismo
+Desde os 12 anos participa do movimento escoteiro. Foi membro jovem até os 21 anos e depois passou a ser auxiliar de chefe de tropa escoteira, onde cuidava de jovens de 10 a 14 anos. Gosta muito do movimento, pena que esta afastado desde 2019.
 
 ## Outras Atividades / Interesses
 
 * Desenvolvimento de Profissionais
 * Treinamento e motivação
 * Estratégia de Marketing pela Internet
-* Chefe de Escoteiros
-* Professor de Artes Marciais
-* Música
-* Role Playing Game (RPG)
-* Fotografia
-* Mergulho
+
+
+
